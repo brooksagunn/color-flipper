@@ -1,3 +1,5 @@
+let background = document.querySelector("#background");
+
 let mainButton = document.querySelector(".btn");
 let btnHeading = document.querySelector(".btn-heading");
 
@@ -21,10 +23,14 @@ const hexInts = [
 ];
 
 mainButton.addEventListener("click", (e) => {
-  let result = "";
+  let hexValue = "";
   for (let i = 1; i <= 6; i++) {
-    result += hexInts[Math.floor(Math.random() * hexInts.length)];
+    hexValue += randomInt();
   }
-  btnHeading.innerHTML = "#" + result;
-  console.log(result);
+  btnHeading.innerHTML = "#" + hexValue;
+  background.style.backgroundColor = "#" + hexValue;
 });
+
+function randomInt() {
+  return hexInts[Math.floor(Math.random() * hexInts.length)];
+}
