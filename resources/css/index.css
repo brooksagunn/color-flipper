@@ -3,13 +3,17 @@
   padding: 0;
 }
 
-/* Button */
-.btn {
-  padding: 20px 50px;
+/* Button and Text */
+.main {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+/* Button */
+.btn {
+  padding: 20px 50px;
   border: none;
   border-radius: 10px;
   background-color: #004f3e;
