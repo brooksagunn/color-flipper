@@ -1,4 +1,5 @@
 let mainButton = document.querySelector(".btn");
+let btnHeading = document.querySelector(".btn-heading");
 
 const hexInts = [
   "0",
@@ -20,6 +21,10 @@ const hexInts = [
 ];
 
 mainButton.addEventListener("click", (e) => {
-  // let hexValue = ;
-  console.log(hexInts[Math.floor(Math.random() * hexInts.length)]);
+  let result = "";
+  for (let i = 1; i <= 6; i++) {
+    result += hexInts[Math.floor(Math.random() * hexInts.length)];
+  }
+  btnHeading.innerHTML = "#" + result;
+  console.log(result);
 });
